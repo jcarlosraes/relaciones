@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  renovation_id: 1
+  visit_date: 2016-04-16 12:36:28
+  completed: false
+
+two:
+  renovation_id: 1
+  visit_date: 2016-04-16 12:36:28
+  completed: false

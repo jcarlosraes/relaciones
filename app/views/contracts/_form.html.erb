@@ -1,0 +1,35 @@
+<%= simple_form_for(contract) do |f| %>
+  <% if contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
+
+      <ul>
+      <% contract.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.association :device, label_method: :name, value_method: :id, include_blank: false%>
+  </div>
+
+  <div class="field">
+    <%= f.association :supplier, label_method: :business_name, value_method: :id, include_blank: false%>
+  </div>
+
+  <div class="field">
+    <%= f.label :contract_no %>
+    <%= f.text_field :contract_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

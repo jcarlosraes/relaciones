@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @location.department %>
+</p>
+
+<p>
+  <strong>Responsable:</strong>
+  <%= @location.responsable %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @location.email %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

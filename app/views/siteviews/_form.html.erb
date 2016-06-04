@@ -1,0 +1,31 @@
+<%= simple_form_for(siteview) do |f| %>
+  <% if siteview.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(siteview.errors.count, "error") %> prohibited this siteview from being saved:</h2>
+
+      <ul>
+      <% siteview.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.association :renovation, label_method: :start_date, value_method: :id, include_blank: false%>
+  </div>
+
+  <div class="field">
+    <%= f.label :visit_date %>
+    <%= f.datetime_select :visit_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

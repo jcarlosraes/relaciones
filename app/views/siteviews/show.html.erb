@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Renovation:</strong>
+  <%= @siteview.renovation_id %>
+</p>
+
+<p>
+  <strong>Visit date:</strong>
+  <%= @siteview.visit_date %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @siteview.completed %>
+</p>
+
+<%= link_to 'Edit', edit_siteview_path(@siteview) %> |
+<%= link_to 'Back', siteviews_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Siteviews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Renovation</th>
+      <th>Visit date</th>
+      <th>Completed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @siteviews.each do |siteview| %>
+      <tr>
+        <td><%= siteview.renovation_id %></td>
+        <td><%= siteview.visit_date %></td>
+        <td><%= siteview.completed %></td>
+        <td><%= link_to 'Show', siteview %></td>
+        <td><%= link_to 'Edit', edit_siteview_path(siteview) %></td>
+        <td><%= link_to 'Destroy', siteview, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Siteview', new_siteview_path %>

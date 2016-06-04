@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device_id: 1
+  supplier_id: 1
+  contract_no: MyString
+  description: MyString
+
+two:
+  device_id: 1
+  supplier_id: 1
+  contract_no: MyString
+  description: MyString

@@ -1,0 +1,26 @@
+<%= form_tag(login_prueba_path(:variable => "ejemplo")) do  %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<form class="form-signin">
+				<h2 class="form-signin-heading">Ingresa tus datos:</h2>
+				<label for="inputEmail" class="sr-only">Email</label>
+				<%= text_field_tag( :correo) %>
+				<!--<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus=""> -->
+				<label for="inputPassword" class="sr-only">Password</label>
+				<%= text_field_tag( :password) %>
+				<!--<input type="password" id="inputPassword" class="form-control" placeholder="Password" required=""> -->
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="remember-me"> Recordar
+					</label>
+        		</div>
+        		<%= submit_tag("Login")%>
+				<!--<button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button> -->
+      		</form>
+		</div>
+	  	<div class="col-md-4"></div>
+	</div>
+</div>
+<% end %>

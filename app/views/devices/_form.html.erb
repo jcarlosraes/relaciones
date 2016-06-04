@@ -1,0 +1,32 @@
+<%= simple_form_for(device) do |f| %>
+  <% if device.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(device.errors.count, "error") %> prohibited this device from being saved:</h2>
+
+      <ul>
+      <% device.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unam_stock_number %>
+    <%= f.text_field :unam_stock_number %>
+  </div>
+
+  <div class="field">
+	  <!-- Esto es una prueba de comentarios -->
+	  <%= f.association :location, collection: Location.orderdept, label_method: :department, value_method: :id, include_blank: false%>
+  </div>
+
+  <div class="actions">
+    	<%= f.submit %>
+  </div>
+<% end %>
